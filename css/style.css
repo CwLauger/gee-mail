@@ -12,8 +12,11 @@ body {
 	font-size: 23px;
 }
 
-senderBox {
-	border: 5px;
+#Inbox {
+	border: 5px solid black;
 	padding: 3px;
-	background-color: ;
+}
+#senderBox{
+	border: 2px powderblue;
+	padding: 1px;
 }
