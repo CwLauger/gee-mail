@@ -1,27 +1,49 @@
-<!DOCTYPE html>
 <html>
-<head>
-	<script src="js/mail-generator.js"></script>
-	<link href="css/style.css" rel="stylesheet" media="screen">
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<title>SeaMail Inbox></title>
-	<script>
-		window.onload = function(){
+	<head>
+		<script src="js/mail-generator.js"></script>
+		<link href="css/style.css" rel="stylesheet" media="screen">
+		<title>SeaMail Webb App</title>
+
+    <script>
+      window.onload = function(){
+
+  					for (var i=0, i<geemails.length, i++){
+
+  						var senderBox = document.createElement('div');
+  						senderBox.className = 'sender';
+  						senderBox.innerHTML = mail-generator[i].sender;
+  						main.appendChild(senderBox);
+  					}
+
+
+       	 // var dateBox = document.createElement('div');
+       	  //dateBox.className = 'date';
+       	  //dateBox.innerHTML = geemails[i].date;
+       	  //main.appendChild()
+
+       	  // var subjectBox = document.createElement('div');
+       	  //subjectBox.className = 'date';
+       	  //subjectBox.innerHTML = geemails[i].subject;
+       	  //main.appendChild()
+
+       	 //console.log(geemails) --> 
+
 
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
-    
-
-
-    };
-    </script>
-     </head>   
+        
    
+    </script>
+	</head>
 	<body>
-		<div class="container" id="main">
-		
-						Build Me!
+		<div id="Homepage">
+			<h1> Welcome To Seamail!</h1><br>
+
+			<p>A sleak way to check your email, and see what new messages you have</p><br>
+
+			<h2>Check You're Inbox Here:</h2><br>
+
+
 		</div>
 	</body>
 </html>
