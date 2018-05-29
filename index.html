@@ -15,16 +15,28 @@
   						Inbox.appendChild(senderBox)
   					}
 
+  					for (var i=0; i<geemails.length; i++){
+  						var dateBox = document.createElement('div')
+  						dateBox.className = 'date';
+  						dateBox.innerHTML = geemails[i].date;
+  						Inbox.appendChild(dateBox)
+  					}
+
+  					for (var i=0; i<geemails.length; i++){
+  						var subjectBox = document.createElement('div');
+  						subjectBox.className= 'subject';
+  						subjectBox.innerHTML = geemails[i].subject;
+  						Inbox.appendChild(subjectBox);
+  					}
+
 
   					
   					
-//for (var i=0; i<geemails.length; i++0){
+						//for (var i=0; i<geemails.length; i++0){
   						//var dateBox = document.createElement('div');
        	  				//dateBox.className = 'date';
        	  				//dateBox.innerHTML = geemails[i].date;
        	  				//Inbox.appendChild(dateBox)
-       	  			//
-
        	}
 
        	 

@@ -12,11 +12,19 @@ body {
 	font-size: 23px;
 }
 
-#Inbox {
-	border: 5px solid black;
-	padding: 3px;
-}
+
+
 #senderBox{
+	border: 2px powderblue;
+	padding: 1px;
+}
+
+#dateBox{
+	border: 2px powderblue;
+	padding: 1px;
+}
+
+#subjectBox{
 	border: 2px powderblue;
 	padding: 1px;
 }
