@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<script src="js/mail-generator.js"></script>
@@ -7,19 +8,22 @@
     <script>
       window.onload = function(){
 
-  					for (var i=0, i<geemails.length, i++){
-
-  						var senderBox = document.createElement('div');
+  					for (var i=0; i<geemails.length; i++){
+						var senderBox = document.createElement('div');
   						senderBox.className = 'sender';
-  						senderBox.innerHTML = mail-generator[i].sender;
-  						main.appendChild(senderBox);
+  						senderBox.innerHTML = geemails[i].sender;
+  						Inbox.appendChild(senderBox)
+
+  						var dateBox = document.createElement('div');
+       	  				dateBox.className = 'date';
+       	  				dateBox.innerHTML = geemails[i].date;
+       	  				Inbox.appendChild(senderBox)
+
   					}
+  					
 
 
-       	 // var dateBox = document.createElement('div');
-       	  //dateBox.className = 'date';
-       	  //dateBox.innerHTML = geemails[i].date;
-       	  //main.appendChild()
+       	 
 
        	  // var subjectBox = document.createElement('div');
        	  //subjectBox.className = 'date';
@@ -32,17 +36,17 @@
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
         
-   
+   }
     </script>
 	</head>
 	<body>
-		<div id="Homepage">
+		<div id='main'>
 			<h1> Welcome To Seamail!</h1><br>
 
 			<p>A sleak way to check your email, and see what new messages you have</p><br>
 
 			<h2>Check You're Inbox Here:</h2><br>
-
+			<div id='Inbox'
 
 		</div>
 	</body>
