@@ -8,60 +8,115 @@
     <script>
       window.onload = function(){
 
-  					for (var i=0; i<geemails.length; i++){
-						var senderBox = document.createElement('div');
-  						senderBox.className = 'sender';
-  						senderBox.innerHTML = geemails[i].sender;
-  						Inbox.appendChild(senderBox)
-  					}
 
+            //For loop to iterate through gmails
   					for (var i=0; i<geemails.length; i++){
+						
+              //sender
+            var senderBox = document.createElement('div');
+  						senderBox.className = 'name';
+              senderBox.innerHTML = geemails[i].sender;
+  						Inbox.appendChild(senderBox)
+  					
+
+  					
+            //date
   						var dateBox = document.createElement('div')
   						dateBox.className = 'date';
   						dateBox.innerHTML = geemails[i].date;
   						Inbox.appendChild(dateBox)
-  					}
+  					
 
-  					for (var i=0; i<geemails.length; i++){
+
+            //subject
   						var subjectBox = document.createElement('div');
   						subjectBox.className= 'subject';
   						subjectBox.innerHTML = geemails[i].subject;
+              subjectBox.addEventListener('click', showBody);
   						Inbox.appendChild(subjectBox);
-  					}
-
-
   					
-  					
-						//for (var i=0; i<geemails.length; i++0){
-  						//var dateBox = document.createElement('div');
-       	  				//dateBox.className = 'date';
-       	  				//dateBox.innerHTML = geemails[i].date;
-       	  				//Inbox.appendChild(dateBox)
-       	}
+					
 
-       	 
-
-       	  // var subjectBox = document.createElement('div');
-       	  //subjectBox.className = 'date';
-       	  //subjectBox.innerHTML = geemails[i].subject;
-       	  //main.appendChild()
-
-       	 //console.log(geemails) --> 
+            //body
+  					var bodyBox = document.createElement('div');
+  					bodyBox.className = 'body';
+  					bodyBox.innerHTML = geemails[i].body;
+  					subjectBox.appendChild(bodyBox);
+            }
 
 
+            //function to hide/show body here. 
+            function showBody(){
+              var bodyMessage = this.querySelectorAll('.body')[0];
+              if(bodyMessage.style.display === 'block'){
+                bodyMessage.style.display = 'none';
+              }else{
+                bodyMessage.style.display = 'block';
+              }
+              }
+
+
+
+                //interval for new emails
+               function writeEmail(){
+
+            for (var i=0; i<getNewMessage.length; i++){
+            
+              //sender
+            var senderBox = document.createElement('div');
+              senderBox.className = 'name';
+              senderBox.innerHTML = getNewMessage[i].sender;
+              Inbox.appendChild(senderBox)
+            
+
+            
+            //date
+              var dateBox = document.createElement('div')
+              dateBox.className = 'date';
+              dateBox.innerHTML = getNewMessage[i].date;
+              Inbox.appendChild(dateBox)
+            
+
+
+            //subject
+              var subjectBox = document.createElement('div');
+              subjectBox.className= 'subject';
+              subjectBox.innerHTML = getNewMessage[i].subject;
+              subjectBox.addEventListener('click', showBody);
+              Inbox.appendChild(subjectBox);
+            
+          
+
+            //body
+            var bodyBox = document.createElement('div');
+            bodyBox.className = 'body';
+            bodyBox.innerHTML = getNewMessage[i].body;
+            subjectBox.appendChild(bodyBox);
+            }
+
+            setInterval(getNewMessage, 5000, writeEmail);
+
+          }
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
-        
      </script>
 	</head>
-	<body>
-		<div id='main'>
-			<h1> Welcome To Seamail!</h1><br>
+	
 
-			<p>A sleak way to check your email, and see what new messages you have</p><br>
+  <body>
+		<div class="container" id='main'>
+			
 
-			<h2>Check You're Inbox Here:</h2><br>
-			<div id='Inbox'></div>
+      <div class="header">
+        <h1>Welcome To Seamail!</h1>
+      </div>
+
+			<p class="intro">A sleak way to check your email, and see what new messages you have</p><br>
+
+			<h2>Check You're Inbox Here:</h2>
+      <div id='Inbox'></div>
+			
+
 
 		</div>
 	</body>

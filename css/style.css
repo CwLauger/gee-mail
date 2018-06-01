@@ -1,10 +1,17 @@
-main {
-	background-color: Gray;
-	color: rgb(o]0, 204, 0);
-	font-family: sans-serif;
-	font-size: 22px;
+
+
+.header {
+    background-color: gray;
+    text-align: center;
+    padding: 5px;
 }
 
+.intro{
+	text-align: center;
+	padding: 3px;
+}
+
+  
 body {
 	background-color: Gray;
     color: rgb(0, 204, 0);
@@ -12,22 +19,34 @@ body {
 	font-size: 23px;
 }
 
-#Inbox {
-	border: 5px solid black;
+p {
+	border: 3px solid gray;
+	padding: 2px;
+}
+
+
+
+.date {
+	border: 2px solid black;
 	padding: 3px;
 }
 
-#senderBox{
-	border: 2px powderblue;
+.name {
+	border: 2px solid black;
 	padding: 1px;
+
 }
 
-#dateBox{
-	border: 2px powderblue;
+.subject {
+	border: 2px solid black;
 	padding: 1px;
+
 }
 
-#subjectBox{
-	border: 2px powderblue;
-	padding: 1px;
+.body {
+	border: 2px solid black;
+	display: none;
+
 }
+
+
