@@ -50,7 +50,8 @@
               var bodyMessage = this.querySelectorAll('.body')[0];
               if(bodyMessage.style.display === 'block'){
                 bodyMessage.style.display = 'none';
-              }else{
+              }
+              else{
                 bodyMessage.style.display = 'block';
               }
               }
@@ -58,56 +59,35 @@
 
 
                 //interval for new emails
-               function writeEmail(){
-
-            for (var i=0; i<getNewMessage.length; i++){
-            
-              //sender
-            var senderBox = document.createElement('div');
-              senderBox.className = 'name';
-              senderBox.innerHTML = getNewMessage[i].sender;
-              Inbox.appendChild(senderBox)
-            
-
-            
-            //date
-              var dateBox = document.createElement('div')
-              dateBox.className = 'date';
-              dateBox.innerHTML = getNewMessage[i].date;
-              Inbox.appendChild(dateBox)
-            
+                //setInterval(getNewMessage(), 5000);
+                var newEmail = getNewMessage();
+                for (var i=0; i<newEmail.length; i++){
+                  //append message data to Inbox div?
+                  var senderBox2 = createElement('div');
+                  senderBox2.className = 'name2';
+                  senderBox2.innerHTML = newEmail[i].sender;
+                  Inbox.appendChild(senderBox2);  
+                }
+                //setInterval(getNewMessage(), 5000);
 
 
-            //subject
-              var subjectBox = document.createElement('div');
-              subjectBox.className= 'subject';
-              subjectBox.innerHTML = getNewMessage[i].subject;
-              subjectBox.addEventListener('click', showBody);
-              Inbox.appendChild(subjectBox);
-            
+
+
           
 
-            //body
-            var bodyBox = document.createElement('div');
-            bodyBox.className = 'body';
-            bodyBox.innerHTML = getNewMessage[i].body;
-            subjectBox.appendChild(bodyBox);
-            }
-
-            setInterval(getNewMessage(), 5000, writeEmail);
-
-          }
-
-
-        // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
-        // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
-     </script>
+            //Inbox Count
+          //var inBoxCount = document.createElement('div');
+          //inBoxCount.className = 'count';
+         // inBoxCount.innerHTML = *array.length* (find name of array containing all email messages);
+         //main.appendChild(inBoxCount);
+        }
+  </script>
 	</head>
 	
 
   <body>
 		<div class="container" id='main'>
-			
+      <div class="inboxCount"></div>			
 
       <div class="header">
         <h1>Welcome To Seamail!</h1>
@@ -117,9 +97,7 @@
 
 			<h2>Check You're Inbox Here:</h2>
       <div id='Inbox'></div>
-			
-
-
-		</div>
+	
+  </div>
 	</body>
-</html>
+  </html>
