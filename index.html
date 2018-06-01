@@ -60,15 +60,17 @@
 
                 //interval for new emails
                 //setInterval(getNewMessage(), 5000);
-                var newEmail = getNewMessage();
-                for (var i=0; i<newEmail.length; i++){
+                
+
+                for (var i=0; i<getNewMessage.length; i++){
                   //append message data to Inbox div?
-                  var senderBox2 = createElement('div');
-                  senderBox2.className = 'name2';
-                  senderBox2.innerHTML = newEmail[i].sender;
-                  Inbox.appendChild(senderBox2);  
+                var newEmail = getNewMessage();
+                newEmail.createElement = 'div';
+                newEmail.className = 'name2';
+                newEmail.innerHTML = getNewMessage[i].sender;
+                Inbox.appendChild(newEmail);  
                 }
-                //setInterval(getNewMessage(), 5000);
+                setInterval(getNewMessage(), 5000);
 
 
 
