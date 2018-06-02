@@ -62,7 +62,8 @@
 
                   //append message data to Inbox div?
 
-
+                      var writeEmail = setInterval(writeNew, 5000);
+                      
                 function writeNew () { 
 
                   var freshEmail =  getNewMessage();
@@ -86,9 +87,13 @@
                         newEmailBody.className = 'freshClass';
                         newEmailBody.innerHTML = freshEmail.body;
                         newInbox.appendChild(newEmailBody);
-                  }
 
-                  setInterval(writeNew(), 5000);
+                        }
+
+
+
+
+
 
 
 
