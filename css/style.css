@@ -69,3 +69,10 @@ p {
 .freshBody {border: 2px solid black;
 	display: none;
 }
+
+.counter{
+	border: 1px solid black;
+	padding: .5px;
+	box-sizing: 2px x 2px;
+	
+}
