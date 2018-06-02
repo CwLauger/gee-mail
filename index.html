@@ -81,6 +81,8 @@
                     var newEmailSubject = document.createElement('div');
                         newEmailSubject.className = 'freshSubject';
                         newEmailSubject.innerHTML = freshEmail.subject;
+                        newEmailSubject.addEventListener('click', showNewBody);
+
                         newInbox.appendChild(newEmailSubject);
 
                     var newEmailBody = document.createElement('div');
@@ -88,13 +90,13 @@
                         newEmailBody.innerHTML = freshEmail.body;
                         newEmailSubject.appendChild(newEmailBody);
 
-                        function showBody(){
-              var newEmailBody = this.querySelectorAll('.freshBody')[0];
-              if(bodyMessage.style.display === 'block'){
-                bodyMessage.style.display = 'none';
+                        function showNewBody(){
+              var newEmailBodyMessage = this.querySelectorAll('.freshBody')[0];
+              if(newEmailBodyMessage.style.display === 'block'){
+                newEmailBodyMessage.style.display = 'none';
               }
               else{
-                bodyMessage.style.display = 'block';
+                newEmailBodyMessage.style.display = 'block';
               }
               }
 
