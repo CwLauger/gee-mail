@@ -26,12 +26,17 @@ p {
 
 
 
-.date {
+.Inbox {
 	border: 2px solid black;
 	padding: 3px;
 }
 
-.name {
+.name{
+	border: 2px solid black;
+	padding: 1px;
+}
+
+.date {
 	border: 2px solid black;
 	padding: 1px;
 
@@ -48,5 +53,4 @@ p {
 	display: none;
 
 }
-
 

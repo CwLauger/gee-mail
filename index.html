@@ -56,32 +56,96 @@
               }
               }
 
-
-
-                //interval for new emails
+               //interval for new emails
                 //setInterval(getNewMessage(), 5000);
                 
 
-                for (var i=0; i<getNewMessage.length; i++){
                   //append message data to Inbox div?
-                var newEmail = getNewMessage();
-                newEmail.createElement = 'div';
-                newEmail.className = 'name2';
-                newEmail.innerHTML = getNewMessage[i].sender;
-                Inbox.appendChild(newEmail);  
-                }
-                setInterval(getNewMessage(), 5000);
+
+
+                function writeNew () { 
+
+                  var freshEmail =  getNewMessage();
+
+                   var newEmailSender = document.createElement('div');
+                       newEmailSender.className = 'freshSender';
+                       newEmailSender.innerHTML = freshEmail.sender;
+                       newInbox.appendChild(newEmailSender);
+
+                   var newEmailDate = document.createElement('div');
+                        newEmailDate.className = 'freshDate';
+                        newEmailDate.innerHTML = freshEmail.date;
+                        newInbox.appendChild(newEmailDate);
+
+                    var newEmailSubject = document.createElement('div');
+                        newEmailSubject.className = 'freshClass';
+                        newEmailSubject.innerHTML = freshEmail.subject;
+                        newInbox.appendChild(newEmailSubject);
+
+                    var newEmailBody = document.createElement('div');
+                        newEmailBody.className = 'freshClass';
+                        newEmailBody.innerHTML = freshEmail.body;
+                        newInbox.appendChild(newEmailBody);
+                  }
+
+                  setInterval(writeNew(), 5000);
+
+
+
+
+
+
+
+
+                      //var newEmailSender = document.createElement('div');
+                   //newEmailSender.className = 'freshSend';
+                   //newEmailSender.innerHTML = freshEmail.sender;
+                   //Inbox.appendChild(newEmailSender);   
+
+                      //var newEmailDate = document.createElement('div');
+                       //newEmailDate.className = 'freshDate';
+                       //newEmailDate.innerHTML = freshEmail.date;
+                       //Inbox.appendChild(newEmailDate); 
+
+                      //var newEmailSubj = document.createElement('div');
+                        ///newEmailSubj.className = 'freshSubj';
+                        //newEmailSubj.innerHTML = freshEmail.subject;
+                        //Inbox.appendChild(newEmailSubj);
+
+                      //var newEmailBody = document.createElement('div');
+                        //  newEmailBody.className = "freshBody";
+                          //newEmailBody.innerHTML = freshEmail.body;
+                          //Inbox.appendChild(newEmailBody);
+                        
+
+
+    //sender: getNewMessage.sender,
+    //date : getNewMessage.date,
+    //subject : getNewMessage.subject,
+    //body : getNewMessage.body,
+    //fullEmail : function() {
+       // return this.sender + " " + this.date + this.subject + this.body;
+                //};
+
+
+
+
+                //newEmail.createElement = 'div';
+                //newEmail.className = 'freshMail';
+                //newEmail.innerHTML = getNewMessage[i];
+               // Inbox.appendChild(newEmail);
+                
 
 
 
 
           
 
-            //Inbox Count
-          //var inBoxCount = document.createElement('div');
-          //inBoxCount.className = 'count';
-         // inBoxCount.innerHTML = *array.length* (find name of array containing all email messages);
-         //main.appendChild(inBoxCount);
+           //Inbox Count
+           //var inBoxCount = document.createElement('div');
+           //inBoxCount.className = 'count';
+          // inBoxCount.innerHTML = *array.length* (find name of array containing all email messages);
+           //main.appendChild(inBoxCount);
         }
   </script>
 	</head>
@@ -98,7 +162,8 @@
 			<p class="intro">A sleak way to check your email, and see what new messages you have</p><br>
 
 			<h2>Check You're Inbox Here:</h2>
-      <div id='Inbox'></div>
+            <div id='newInbox'></div>
+            <div id='Inbox'></div>
 	
   </div>
 	</body>

@@ -12,7 +12,7 @@
     for (var i = 0; i < 10; i++){
       var message = generateMessage();
       window.geemails.push(message);
-    }
+    }               
   }
 
   function generateMessage(date){
