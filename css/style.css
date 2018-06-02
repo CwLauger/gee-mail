@@ -54,3 +54,17 @@ p {
 
 }
 
+.freshSender {border: 2px solid black;
+	padding: 1px;
+}
+
+.freshDate  {border: 2px solid black;
+	padding: 1px;
+}
+.freshSubject{border: 2px solid black;
+	padding: 1px;
+
+}
+
+.freshBody {border: 2px solid black;
+	display: none;}

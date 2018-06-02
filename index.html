@@ -63,7 +63,7 @@
                   //append message data to Inbox div?
 
                       var writeEmail = setInterval(writeNew, 5000);
-                      
+
                 function writeNew () { 
 
                   var freshEmail =  getNewMessage();
@@ -79,14 +79,24 @@
                         newInbox.appendChild(newEmailDate);
 
                     var newEmailSubject = document.createElement('div');
-                        newEmailSubject.className = 'freshClass';
+                        newEmailSubject.className = 'freshSubject';
                         newEmailSubject.innerHTML = freshEmail.subject;
                         newInbox.appendChild(newEmailSubject);
 
                     var newEmailBody = document.createElement('div');
-                        newEmailBody.className = 'freshClass';
+                        newEmailBody.className = 'freshBody';
                         newEmailBody.innerHTML = freshEmail.body;
-                        newInbox.appendChild(newEmailBody);
+                        newEmailSubject.appendChild(newEmailBody);
+
+                        function showBody(){
+              var newEmailBody = this.querySelectorAll('.freshBody')[0];
+              if(bodyMessage.style.display === 'block'){
+                bodyMessage.style.display = 'none';
+              }
+              else{
+                bodyMessage.style.display = 'block';
+              }
+              }
 
                         }
 
