@@ -57,12 +57,9 @@
               }
 
                //interval for new emails
-                //setInterval(getNewMessage(), 5000);
-                
+               //append message data to Inbox div
 
-                  //append message data to Inbox div?
-
-                      var writeEmail = setInterval(writeNew, 20000);
+                      var writeEmail = setInterval(writeNew, 2000);
 
                 function writeNew () { 
 
@@ -89,6 +86,17 @@
                         newEmailBody.innerHTML = freshEmail.body;
                         newEmailSubject.appendChild(newEmailBody);
 
+
+                      document.getElementById('ret').innerHTML = geemails.length++
+
+
+
+
+
+
+                                                }
+
+                        
                         function showNewBody(){
               var newEmailBodyMessage = this.querySelectorAll('.freshBody')[0];
               if(newEmailBodyMessage.style.display === 'block'){
@@ -99,83 +107,40 @@
               }
               }
 
-                        }
+                        
+                            
+// working on Inbox counter 
+                                      //returns "undefined in MailCount div element."
+                        var inBoxCount = document.createElement('div');
+                        inBoxCount.id = "ret"
+                        inBoxCount.innerHTML = geemails.length = 10;
+                        MailCount.appendChild(inBoxCount);
+
+                        //var updatingCount = 
+                      
+
+
+                     
+
+                                        
+
+                         
+
+
+
+
+
+
+
+                              //var inBoxCounter = ;
+                              //inBoxCounter.createElement = ('box');
+                              //inBoxCounter.className = 'counter';
+                              //inboxCounter.innerHTML = 10 + freshEmail.body;
+                              //counter.appendChild(inBoxCounter);
                             
 
-// working on Inbox counter
-                           //inBoxCounter() {           
-                            //function inBoxCount(){
-                             // var inComing = 
-                              //inBoxCount.className = 'counter';
-                              //inboxCount.innerHTML = 
-                            //}
-
-   // var eMails = {freshBody body};
-   // document.getElementById("freshBody body").innerHTML = eMails.length;
-   // eMails.lengt
-//}
-
-
-
-
-
-
-
-
-
-
-
-
-
-                      //var newEmailSender = document.createElement('div');
-                   //newEmailSender.className = 'freshSend';
-                   //newEmailSender.innerHTML = freshEmail.sender;
-                   //Inbox.appendChild(newEmailSender);   
-
-                      //var newEmailDate = document.createElement('div');
-                       //newEmailDate.className = 'freshDate';
-                       //newEmailDate.innerHTML = freshEmail.date;
-                       //Inbox.appendChild(newEmailDate); 
-
-                      //var newEmailSubj = document.createElement('div');
-                        ///newEmailSubj.className = 'freshSubj';
-                        //newEmailSubj.innerHTML = freshEmail.subject;
-                        //Inbox.appendChild(newEmailSubj);
-
-                      //var newEmailBody = document.createElement('div');
-                        //  newEmailBody.className = "freshBody";
-                          //newEmailBody.innerHTML = freshEmail.body;
-                          //Inbox.appendChild(newEmailBody);
-                        
-
-
-    //sender: getNewMessage.sender,
-    //date : getNewMessage.date,
-    //subject : getNewMessage.subject,
-    //body : getNewMessage.body,
-    //fullEmail : function() {
-       // return this.sender + " " + this.date + this.subject + this.body;
-                //};
-
-
-
-
-                //newEmail.createElement = 'div';
-                //newEmail.className = 'freshMail';
-                //newEmail.innerHTML = getNewMessage[i];
-               // Inbox.appendChild(newEmail);
                 
-
-
-
-
-          
-
-           //Inbox Count
-           //var inBoxCount = document.createElement('div');
-           //inBoxCount.className = 'count';
-          // inBoxCount.innerHTML = *array.length* (find name of array containing all email messages);
-           //main.appendChild(inBoxCount);
+        //close windows.onload - DON'T DELETE!
         }
   </script>
 	</head>
@@ -183,15 +148,15 @@
 
   <body>
 		<div class="container" id='main'>
-      <div class="inboxCount"></div>			
+     			
 
       <div class="header">
-        <h1>Welcome To Seamail!</h1>
-      </div>
+        <h1>Welcome To Seamail!</h1></div>
+			<p class="intro">A not-so-sleak way to check your email, and see what new messages you have</p><br>
+      <div id='MailCount'>Message Count:</div></div>
 
-			<p class="intro">A sleak way to check your email, and see what new messages you have</p><br>
+			<h2>Check You're Inbox Here:</h2>    
 
-			<h2>Check You're Inbox Here:</h2>
             <div id='newInbox'></div>
             <div id='Inbox'></div>
 	
