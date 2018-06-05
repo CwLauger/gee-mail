@@ -111,9 +111,11 @@
                             
 // working on Inbox counter 
                                       //returns "undefined in MailCount div element."
+                        
+                        var initial10 = geemails.length
                         var inBoxCount = document.createElement('div');
                         inBoxCount.id = "ret"
-                        inBoxCount.innerHTML = geemails.length;
+                        inBoxCount.innerHTML = initial10;
                         MailCount.appendChild(inBoxCount);
 
                         //var updatingCount = 
